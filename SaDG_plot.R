@@ -64,9 +64,6 @@ summarySE <- function(data=NULL, measurevar, groupvars=NULL, na.rm=FALSE,
 DF <- data.frame(sname=c(rep("S1",10),rep("S2",10)),
                  type=rep(seq(from=0.5,to=2.5,by=0.5),20),
                  Ngenes=rep(log2(seq(from=1,to=5000,by=1000)),20)-runif(min = 1,max=2.5,n=20))
-fl <- "/local/jperales/DimitrovS_singleCell/Results/Saturation_curve/C1_saDG_table_v4.tsv";
-fl <- "/local/jperales/MullallyA/AM_results/QC/Saturationcurve.tsv"
-DF <- read.table(fl,sep = "\t",col.names=c("sname","type","NgenesByCPM","Ngenes"))
 
 DF$type <- DF$type*1e-6
 
